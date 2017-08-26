@@ -13,18 +13,28 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import dataprovider.ExcelDp;
+
 public class TestngAnnoataionClass extends WdMethods {
 	
+	public String dataSheetName;
 	/*
 	@BeforeSuite
 
 	@BeforeTest
 	
-	@BeforeGroups
+	@BeforeGroups*/
 	
-	@BeforeClass
+	@BeforeClass 
+	public void setValues(){
+		
+	}
 	
-	@DataProvider*/
+	@DataProvider(name="fetchdata")
+	public Object[][] getData(){
+		return ExcelDp.getAllSheetData(dataSheetName);
+		
+	}
 	
 	@BeforeMethod
 	public void browserLaunch(){
@@ -36,13 +46,10 @@ public class TestngAnnoataionClass extends WdMethods {
 	
 	@AfterMethod
 	public void afterMethod(){
-		
-	}
-	
-    public void closeBrowser(){
 		quitApp();
 	}
 	
+    
 	@AfterClass
 	public void afterClass(){
 		
@@ -62,5 +69,7 @@ public class TestngAnnoataionClass extends WdMethods {
 	public void afterSuite(){
 		
 	}
+	
+	
 	
 }

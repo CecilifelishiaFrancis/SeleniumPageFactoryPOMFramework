@@ -22,13 +22,13 @@ public class LoginPage extends AbstractPage {
 		PageFactory.initElements(eventDriver, this);
 	}
 	
-	public LoginPage enterUserName(){
-		type(uName, "DemoSalesManager");
+	public LoginPage enterUserName(String username){
+		type(uName, username);
 		return this;
 	}
 	
-	public LoginPage enterPassword(){
-		type(passWord, "crmsfa");
+	public LoginPage enterPassword(String password){
+		type(passWord, password);
 		return this;
 	}
 	

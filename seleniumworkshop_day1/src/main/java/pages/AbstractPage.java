@@ -2,6 +2,6 @@ package pages;
 
 import wrapper.WdMethods;
 
-public class AbstractPage extends WdMethods {
+public abstract class AbstractPage extends WdMethods {
 
 }

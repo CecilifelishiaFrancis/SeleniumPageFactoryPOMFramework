@@ -20,8 +20,8 @@ public class EditLeadPage extends AbstractPage {
 		PageFactory.initElements(eventDriver, this);
 	}
 	
-	public EditLeadPage changeCompanyName(){
-		type(changecompanyname, "CTS");
+	public EditLeadPage changeCompanyName(String companyname){
+		type(changecompanyname, companyname);
 		return new EditLeadPage();
 	}
 	

@@ -10,6 +10,9 @@ public class MyHomePage extends AbstractPage{
 	@FindBy(how=How.LINK_TEXT, using="Leads")
 	WebElement clickleadslink;
 	
+	@FindBy(how=How.LINK_TEXT, using="Create Lead")
+	WebElement clickcreatelead;
+	
 	public MyHomePage(){
 		PageFactory.initElements(eventDriver, this);
 	}
@@ -17,6 +20,11 @@ public class MyHomePage extends AbstractPage{
 	public MyLeadsPage clickLeads(){
 		click(clickleadslink);
 		return new MyLeadsPage();
+	}
+	
+	public CreateLeadPage clickCreateLead(){
+		click(clickcreatelead);
+		return new CreateLeadPage();
 	}
 
 }

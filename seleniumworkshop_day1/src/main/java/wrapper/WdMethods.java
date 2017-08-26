@@ -174,8 +174,9 @@ public class WdMethods extends ImplementListers {
 		ele.getAttribute(getatttext);
 		}
 	
-	public void getText(WebElement ele){
+	public boolean getText(WebElement ele){
 		ele.getText();
+		return false;
 	}
 	
 	public boolean verifyText(WebElement ele, String filedtext){
